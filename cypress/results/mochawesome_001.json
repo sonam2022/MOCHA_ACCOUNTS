@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-10-17T20:11:48.229Z",
+    "end": "2024-10-17T20:13:16.979Z",
+    "duration": 88750,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "06e89c5d-6f4b-49cb-9791-d4f561daa7b1",
+      "title": "",
+      "fullFile": "cypress\\TestMochaAccounts\\mochaForgotPasswword.specs.js",
+      "file": "cypress\\TestMochaAccounts\\mochaForgotPasswword.specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7682e269-c4e6-4084-a895-d8dcffc15a64",
+          "title": "Mocha Forget Password",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Forgot password screen",
+              "fullTitle": "Mocha Forget Password Forgot password screen",
+              "timedOut": null,
+              "duration": 82622,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\TestMochaAccounts\\\\mochaForgotPasswword.specs.js\"\n}",
+              "code": "cy.fixture(\"forgotpasswordemails.json\").then(function (data) {\n  globalThis.emaildata = data;\n  console.log(emaildata.email);\n  cy.visit('');\n  login.loginbutton().click();\n  forpwd.forgotpasswordnav().click();\n  forpwd.entermail().type(emaildata.email);\n  cy.wait(10000);\n  forpwd.clickSubmit().click();\n  cy.wait(30000);\n});",
+              "err": {},
+              "uuid": "4daf9aa9-1828-44c7-becd-e77df8ea85da",
+              "parentUUID": "7682e269-c4e6-4084-a895-d8dcffc15a64",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Gets Password Reset email from Mailosaur",
+              "fullTitle": "Mocha Forget Password Gets Password Reset email from Mailosaur",
+              "timedOut": null,
+              "duration": 6065,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\TestMochaAccounts\\\\mochaForgotPasswword.specs.js\"\n}",
+              "code": "const serverId = 'vmsjdi6i';\nconsole.log(emaildata.email);\ncy.mailosaurSearchMessages(serverId, {\n  sentTo: emaildata.email\n}).then(email => {\n  console.log(email.items[0]);\n  cy.mailosaurGetMessage(serverId, {\n    sentTo: emaildata.email\n  }).then(email => {\n    console.log(emaildata.email);\n    expect(email.subject).to.contain(\"Here's your PIN \");\n    const otp = email.html.codes[0].value;\n    console.log(otp);\n    forpwd.enterVerificationCode().type(otp);\n    forpwd.clickVerify().click();\n    forpwd.enterNewPassword().type('Mocha@4321');\n    forpwd.enterConfirmPassword().type('Mocha@4321');\n    forpwd.clickSubmit2().click();\n    cy.log('Password reset successfull');\n  });\n});",
+              "err": {},
+              "uuid": "f55edba1-93f8-42a8-9a35-839ef3f01a2d",
+              "parentUUID": "7682e269-c4e6-4084-a895-d8dcffc15a64",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4daf9aa9-1828-44c7-becd-e77df8ea85da",
+            "f55edba1-93f8-42a8-9a35-839ef3f01a2d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 88687,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "embeddedScreenshots": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
