@@ -32,6 +32,7 @@ module.exports = defineConfig({
     env: {
     MAILOSAUR_API_KEY: "Dbd0Fc2qIjfa0SUhhgDJfzx7sn6mwvmo",
       MAILOSAUR_BASE_URL:"https://mailosaur.com/",
+      CYPRESS_RECORD_KEY:"abab6f85-2f5f-4795-8d0b-c6d6cfa95bc7"
     },
 
   e2e: {
