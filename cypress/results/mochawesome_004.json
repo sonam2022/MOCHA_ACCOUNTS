@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-10-18T21:02:12.294Z",
+    "end": "2024-10-18T21:02:38.887Z",
+    "duration": 26593,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "08df4fe6-e02b-43e9-8b56-886f201849f5",
+      "title": "",
+      "fullFile": "cypress\\TestMochaAccounts\\scheduleademomocha.specs.js",
+      "file": "cypress\\TestMochaAccounts\\scheduleademomocha.specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "043e816e-dd3f-426f-bd66-1037c5c8fc8b",
+          "title": "Mocha Accounting Demo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Schedule A Demo",
+              "fullTitle": "Mocha Accounting Demo Schedule A Demo",
+              "timedOut": null,
+              "duration": 26577,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\TestMochaAccounts\\\\scheduleademomocha.specs.js\"\n}",
+              "code": "demo.username().type(nameRandomun);\ndemo.email().type(email);\ndemo.contactNumber().type(cell_phone);\ncy.wait(5000);\ndemo.newdate().type(\"2024-10-31\");\ndemo.time().type(\"13:11\");\ndemo.message().type(message);\ndemo.submitbutton().click();\ncy.log('Demo scheduled  successfully');",
+              "err": {},
+              "uuid": "88a17c1c-072d-4522-bc54-80613e3684c9",
+              "parentUUID": "043e816e-dd3f-426f-bd66-1037c5c8fc8b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "88a17c1c-072d-4522-bc54-80613e3684c9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 26577,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "embeddedScreenshots": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

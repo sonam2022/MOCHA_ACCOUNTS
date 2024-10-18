@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-10-18T21:02:45.621Z",
+    "end": "2024-10-18T21:02:54.448Z",
+    "duration": 8827,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ee83c2c9-64e8-45f9-9250-ff7878a7066f",
+      "title": "",
+      "fullFile": "cypress\\TestMochaAccounts\\TestContactForm.specs.js",
+      "file": "cypress\\TestMochaAccounts\\TestContactForm.specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7661bfb2-e0dc-4861-aa24-0ec823a4eb62",
+          "title": "MOCHA Accounting Contact Form Fail",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Mocha Fail Test Case Form",
+              "fullTitle": "MOCHA Accounting Contact Form Fail Mocha Fail Test Case Form",
+              "timedOut": null,
+              "duration": 8726,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\TestMochaAccounts\\\\TestContactForm.specs.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\TestContactForm.specs.js\\\\MOCHA Accounting Contact Form Fail -- Mocha Fail Test Case Form -- before all hook (failed).png\"\n      ]\n    ]\n  },\n  \"assets/TestContactForm.specs.js/MOCHA Accounting Contact Form Fail --       Mocha Fail Test Case Form (failed).png\"\n]",
+              "code": "cy.get('a').contains('About & Contact').click(); //cy.get('input[name=\"your-name\"]').type('Test Name');\n//cy.get('input[name=\"your-email\"]').type('Test@yopmail.com');\n//cy.get('input[name=\"your-company\"]').type('Test Subject');\ncy.get('select').select(1);\ncy.get('textarea[name=\"your-message\"]').type('Test Subject');\ncy.get('iframe').first().its('0.contentDocument.body').should('not.be.undefined').and('not.be.empty').then(cy.wrap).find('#recaptcha-anchor').should('be.visible').click();\ncy.wait(50000);\ncy.get('input[type=\"submit\"]').click();\ncy.contains('Thank you for your message. It has been sent.').should('be.visible');\ncy.screenshot();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://mochaaccounting.com/' to include 'arcanetinmen'\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `MOCHA Accounting Contact Fo...`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://mochaaccounting.com/' to include 'arcanetinmen'\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `MOCHA Accounting Contact Fo...`\n    at Context.eval (webpack:///./cypress/TestMochaAccounts/TestContactForm.specs.js:6:20)",
+                "diff": null
+              },
+              "uuid": "01ba34b7-f9c9-4d14-b22b-a1b900cb9ff0",
+              "parentUUID": "7661bfb2-e0dc-4861-aa24-0ec823a4eb62",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "01ba34b7-f9c9-4d14-b22b-a1b900cb9ff0"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 8726,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "embeddedScreenshots": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

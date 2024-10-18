@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2024-10-17T21:19:15.056Z",
-    "end": "2024-10-17T21:20:16.101Z",
-    "duration": 61045,
+    "start": "2024-10-18T20:58:10.800Z",
+    "end": "2024-10-18T20:59:27.789Z",
+    "duration": 76989,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "5a55324b-7449-4a1b-ace0-dccbe62e21ae",
+      "uuid": "9bf907ce-88f2-48f3-9c81-e33b7ad05d1b",
       "title": "",
       "fullFile": "cypress\\TestMochaAccounts\\mochaForgotPasswword.specs.js",
       "file": "cypress\\TestMochaAccounts\\mochaForgotPasswword.specs.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a010d781-544d-4c8f-ad4e-c6ceeb1494e4",
+          "uuid": "3be1ecee-27f5-4f5a-96f8-860b508f6406",
           "title": "Mocha Forget Password",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Forgot password screen",
               "fullTitle": "Mocha Forget Password Forgot password screen",
               "timedOut": null,
-              "duration": 54504,
+              "duration": 70144,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\TestMochaAccounts\\\\mochaForgotPasswword.specs.js\"\n}",
               "code": "cy.fixture(\"forgotpasswordemails.json\").then(function (data) {\n  globalThis.emaildata = data;\n  console.log(emaildata.email);\n  cy.visit('');\n  login.loginbutton().click();\n  forpwd.forgotpasswordnav().click();\n  forpwd.entermail().type(emaildata.email);\n  cy.wait(10000);\n  forpwd.clickSubmit().click();\n  cy.wait(30000);\n});",
               "err": {},
-              "uuid": "b3894dcd-4bf3-4e76-918d-e5c61dc432b5",
-              "parentUUID": "a010d781-544d-4c8f-ad4e-c6ceeb1494e4",
+              "uuid": "b0d60a2f-7ba0-44ef-bed2-f3d562953768",
+              "parentUUID": "3be1ecee-27f5-4f5a-96f8-860b508f6406",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Gets Password Reset email from Mailosaur",
               "fullTitle": "Mocha Forget Password Gets Password Reset email from Mailosaur",
               "timedOut": null,
-              "duration": 6380,
+              "duration": 6731,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\TestMochaAccounts\\\\mochaForgotPasswword.specs.js\"\n}",
               "code": "const serverId = 'vmsjdi6i';\nconsole.log(emaildata.email);\ncy.mailosaurSearchMessages(serverId, {\n  sentTo: emaildata.email\n}).then(email => {\n  console.log(email.items[0]);\n  cy.mailosaurGetMessage(serverId, {\n    sentTo: emaildata.email\n  }).then(email => {\n    console.log(emaildata.email);\n    expect(email.subject).to.contain(\"Here's your PIN \");\n    const otp = email.html.codes[0].value;\n    console.log(otp);\n    forpwd.enterVerificationCode().type(otp);\n    forpwd.clickVerify().click();\n    forpwd.enterNewPassword().type('Mocha@4321');\n    forpwd.enterConfirmPassword().type('Mocha@4321');\n    forpwd.clickSubmit2().click();\n    cy.log('Password reset successfull');\n  });\n});",
               "err": {},
-              "uuid": "8aee0124-2a94-4ae6-8cc5-0490b1dc3797",
-              "parentUUID": "a010d781-544d-4c8f-ad4e-c6ceeb1494e4",
+              "uuid": "fa37a760-c33c-48f0-8103-77ba086620ff",
+              "parentUUID": "3be1ecee-27f5-4f5a-96f8-860b508f6406",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b3894dcd-4bf3-4e76-918d-e5c61dc432b5",
-            "8aee0124-2a94-4ae6-8cc5-0490b1dc3797"
+            "b0d60a2f-7ba0-44ef-bed2-f3d562953768",
+            "fa37a760-c33c-48f0-8103-77ba086620ff"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 60884,
+          "duration": 76875,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
