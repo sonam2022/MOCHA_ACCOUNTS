@@ -10,7 +10,15 @@ jobs:
       fail-fast: false # https://github.com/cypress-io/github-action/issues/48
       matrix:
         containers: [1, 2] # Uses 2 parallel instances
+      
     steps:
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+            node-version: 16.14.0
+            cache: "npm"
+
       - name: Checkout
         uses: actions/checkout@v4
 
