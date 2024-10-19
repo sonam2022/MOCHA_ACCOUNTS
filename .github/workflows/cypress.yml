@@ -27,7 +27,8 @@ jobs:
          
         with:
           #  build: npm run build
-            start: npm run pretest
+          working-directory: C:\Users\sonam\OneDrive\Desktop\ME\MOCHA_ACCOUNTS
+          start: npm run pretest
         
         env:
           # For recording and parallelization to work you must set your CYPRESS_RECORD_KEY
