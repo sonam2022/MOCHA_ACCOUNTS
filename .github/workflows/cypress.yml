@@ -28,7 +28,7 @@ jobs:
         with:
           install: true
           project: C:\Users\sonam\OneDrive\Desktop\ME\MOCHA_ACCOUNTS
-          command: npm cypress run
+          command: npm run pretest
           config-file: cypress.config.js
           wait-on-timeout: 900
           browser: chrome
