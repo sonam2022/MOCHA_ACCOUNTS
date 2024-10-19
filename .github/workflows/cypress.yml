@@ -23,13 +23,11 @@ jobs:
       - name: Cypress run
 
         # Uses the official Cypress GitHub action https://github.com/cypress-io/github-action
-        uses: actions/github-action@v6
-
-       
+        uses: cypress-io/github-action@v6.1.0
         
         with:
           install: true
-          project: MOCHA_ACCOUNTS
+          project: C:\Users\sonam\OneDrive\Desktop\ME\MOCHA_ACCOUNTS
           command: npm cypress run
           config-file: cypress.config.js
           wait-on-timeout: 900
