@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2024-10-18T21:02:45.621Z",
-    "end": "2024-10-18T21:02:54.448Z",
-    "duration": 8827,
+    "start": "2024-10-19T18:32:25.982Z",
+    "end": "2024-10-19T18:32:34.999Z",
+    "duration": 9017,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ee83c2c9-64e8-45f9-9250-ff7878a7066f",
+      "uuid": "733ea64a-006d-4593-b801-b3752eee841f",
       "title": "",
       "fullFile": "cypress\\TestMochaAccounts\\TestContactForm.specs.js",
       "file": "cypress\\TestMochaAccounts\\TestContactForm.specs.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7661bfb2-e0dc-4861-aa24-0ec823a4eb62",
+          "uuid": "b73cc78d-1216-4ecd-a417-b9cd549cd7be",
           "title": "MOCHA Accounting Contact Form Fail",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Mocha Fail Test Case Form",
               "fullTitle": "MOCHA Accounting Contact Form Fail Mocha Fail Test Case Form",
               "timedOut": null,
-              "duration": 8726,
+              "duration": 8882,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://mochaaccounting.com/' to include 'arcanetinmen'\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `MOCHA Accounting Contact Fo...`\n    at Context.eval (webpack:///./cypress/TestMochaAccounts/TestContactForm.specs.js:6:20)",
                 "diff": null
               },
-              "uuid": "01ba34b7-f9c9-4d14-b22b-a1b900cb9ff0",
-              "parentUUID": "7661bfb2-e0dc-4861-aa24-0ec823a4eb62",
+              "uuid": "10f3ba8e-7ee4-4f39-b399-fb8b9f60d266",
+              "parentUUID": "b73cc78d-1216-4ecd-a417-b9cd549cd7be",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "01ba34b7-f9c9-4d14-b22b-a1b900cb9ff0"
+            "10f3ba8e-7ee4-4f39-b399-fb8b9f60d266"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 8726,
+          "duration": 8882,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

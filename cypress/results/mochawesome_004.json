@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-10-18T21:02:12.294Z",
-    "end": "2024-10-18T21:02:38.887Z",
-    "duration": 26593,
+    "start": "2024-10-19T18:31:52.161Z",
+    "end": "2024-10-19T18:32:18.830Z",
+    "duration": 26669,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "08df4fe6-e02b-43e9-8b56-886f201849f5",
+      "uuid": "fadeb96c-0b7b-4046-99dc-91f84ab443ba",
       "title": "",
       "fullFile": "cypress\\TestMochaAccounts\\scheduleademomocha.specs.js",
       "file": "cypress\\TestMochaAccounts\\scheduleademomocha.specs.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "043e816e-dd3f-426f-bd66-1037c5c8fc8b",
+          "uuid": "969d5d41-57eb-4cad-b5e5-46e81382b7cd",
           "title": "Mocha Accounting Demo",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Schedule A Demo",
               "fullTitle": "Mocha Accounting Demo Schedule A Demo",
               "timedOut": null,
-              "duration": 26577,
+              "duration": 26595,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\TestMochaAccounts\\\\scheduleademomocha.specs.js\"\n}",
               "code": "demo.username().type(nameRandomun);\ndemo.email().type(email);\ndemo.contactNumber().type(cell_phone);\ncy.wait(5000);\ndemo.newdate().type(\"2024-10-31\");\ndemo.time().type(\"13:11\");\ndemo.message().type(message);\ndemo.submitbutton().click();\ncy.log('Demo scheduled  successfully');",
               "err": {},
-              "uuid": "88a17c1c-072d-4522-bc54-80613e3684c9",
-              "parentUUID": "043e816e-dd3f-426f-bd66-1037c5c8fc8b",
+              "uuid": "e041af26-57c6-46a2-ac42-3487fee7dd27",
+              "parentUUID": "969d5d41-57eb-4cad-b5e5-46e81382b7cd",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "88a17c1c-072d-4522-bc54-80613e3684c9"
+            "e041af26-57c6-46a2-ac42-3487fee7dd27"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 26577,
+          "duration": 26595,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

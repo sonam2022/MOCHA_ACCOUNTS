@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-10-18T20:57:25.028Z",
-    "end": "2024-10-18T20:57:38.105Z",
-    "duration": 13077,
+    "start": "2024-10-19T18:28:53.417Z",
+    "end": "2024-10-19T18:29:06.864Z",
+    "duration": 13447,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "1776f0ce-6c9b-4994-adaf-2be1e078acd5",
+      "uuid": "7f2bd384-fc7e-4565-b6bf-220d5ee075f3",
       "title": "",
       "fullFile": "cypress\\TestMochaAccounts\\mochafooterlinks.specs.js",
       "file": "cypress\\TestMochaAccounts\\mochafooterlinks.specs.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7193396d-10ac-45b4-b501-f504dd042a5d",
+          "uuid": "535aecbb-d9ca-4cce-9dd3-5e71910ac993",
           "title": "Mocha Footer links Navigation",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Visit all footer links",
               "fullTitle": "Mocha Footer links Navigation Visit all footer links",
               "timedOut": null,
-              "duration": 13050,
+              "duration": 13428,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\TestMochaAccounts\\\\mochafooterlinks.specs.js\"\n}",
               "code": "cy.visit(\"\");\ncy.wait(5000);\nfooterlink.footerclass().eq(1).scrollIntoView();\nfooterlink.footerclass().each(links => {\n  cy.get(links).invoke('attr', 'target', '_blank').click({\n    force: true\n  });\n  cy.log(cy.url());\n});",
               "err": {},
-              "uuid": "8b05f998-b136-4495-9a08-e562ba6ac6aa",
-              "parentUUID": "7193396d-10ac-45b4-b501-f504dd042a5d",
+              "uuid": "6bc75b51-8e27-4c68-822b-8ac52009bf81",
+              "parentUUID": "535aecbb-d9ca-4cce-9dd3-5e71910ac993",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "8b05f998-b136-4495-9a08-e562ba6ac6aa"
+            "6bc75b51-8e27-4c68-822b-8ac52009bf81"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 13050,
+          "duration": 13428,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

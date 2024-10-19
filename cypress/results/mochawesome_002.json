@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-10-18T20:59:41.984Z",
-    "end": "2024-10-18T20:59:53.804Z",
-    "duration": 11820,
+    "start": "2024-10-19T18:31:03.750Z",
+    "end": "2024-10-19T18:31:15.948Z",
+    "duration": 12198,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "d0105369-d8cf-4edb-83fd-ce7f76894e22",
+      "uuid": "047656bb-d4bf-4020-98f7-f0047f1ff13a",
       "title": "",
       "fullFile": "cypress\\TestMochaAccounts\\mochalogin.specs.js",
       "file": "cypress\\TestMochaAccounts\\mochalogin.specs.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "cc3cb1fe-6e05-40d5-a6de-3bed69a94bbe",
+          "uuid": "e0efa618-eabc-43ff-9256-8a093841cd62",
           "title": "Mocha Accounting Login",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Login with Valid credentials",
               "fullTitle": "Mocha Accounting Login Login with Valid credentials",
               "timedOut": null,
-              "duration": 11677,
+              "duration": 12170,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\TestMochaAccounts\\\\mochalogin.specs.js\"\n}",
               "code": "login.email().type(logindata.email);\nlogin.password().type(logindata.password2);\nlogin.loginenter().click(); // login.logoutbutton().should('be.visible');\ncy.log('User logged in  successfully');",
               "err": {},
-              "uuid": "4a82ec41-2f94-4143-b4e2-36e4b49a3f11",
-              "parentUUID": "cc3cb1fe-6e05-40d5-a6de-3bed69a94bbe",
+              "uuid": "1ab1f12d-87c7-4d27-ab33-0b74db514fd3",
+              "parentUUID": "e0efa618-eabc-43ff-9256-8a093841cd62",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "4a82ec41-2f94-4143-b4e2-36e4b49a3f11"
+            "1ab1f12d-87c7-4d27-ab33-0b74db514fd3"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 11677,
+          "duration": 12170,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
