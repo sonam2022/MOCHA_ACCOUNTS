@@ -13,16 +13,29 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Cypress run
-        # Uses the official Cypress GitHub action https://github.com/cypress-io/github-action
-        uses: cypress-io/github-action@v6
+
         with:
+            node-version: 20
+            cache: 'npm'
+            cache-dependency-path: subdir/package-lock.json
+  
+
+      - name: Cypress run
+
+        # Uses the official Cypress GitHub action https://github.com/cypress-io/github-action
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: subdir/package-lock.json
+        
           working-directory: C:\Users\sonam\OneDrive\Desktop\ME\MOCHA_ACCOUNTS
           # Starts web server for E2E tests - replace with your own server invocation
           # https://docs.cypress.io/guides/continuous-integration/introduction#Boot-your-server
           
           browser: chrome
-          start: npm run pretest
+          run: npm run pretest
+         # run: npm run mtest
           config-file: cypress.config.js  
          # wait-on: 'http://localhost:3000' # Waits for above
           # Records to Cypress Cloud 
