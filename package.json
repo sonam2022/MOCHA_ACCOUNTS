@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress open",
-    "file:json": "rm mochawesome.json",
+    "file:json": "if exist mochawesome.json rm mochawesome.json",
     "clean:reports": "if exist cypress\\results rmdir /S /Q cypress\\results && mkdir cypress\\results",
     "pretest": "npm run file:json && npm run clean:reports",
     "scripts": "cypress run --browser chrome",
