@@ -13,6 +13,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
+          
       - run: npm ci
      # - run: npm run build --if-present
+      - run: npm run pretest
       - run: npm run mtest
+
+      - name: Show results file
+        run: /home/runner/work/MOCHA_ACCOUNTS/MOCHA_ACCOUNTS/mochawesome-report/mochawesome.html
