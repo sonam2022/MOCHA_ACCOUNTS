@@ -1,19 +1,41 @@
-name: E2E on Chrome
-
-on: [push]
+name: example-config
+on:
+  push:
+    branches:
+      - 'main'
+  pull_request:
+  workflow_dispatch:
 
 jobs:
-  install:
-    runs-on: ubuntu-latest
+
+  start:
+    # example where we pass custom base URL
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      - name: Cypress run
-        uses: cypress-io/github-action@v6
+      - name: Cypress tests
+        uses: ./
         with:
-          project: C:\Users\sonam\OneDrive\Desktop\ME\MOCHA_ACCOUNTS
-          browser: chrome
-          build: npm build
+          working-directory: examples/config
+          build: npm run build
           start: npm start
-          wait-on: "http://localhost:3000"
+          wait-on: 'http://localhost:3333'
+          
+
+  config-file:
+    # example where we use a custom config-file
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cypress tests
+        uses: ./
+        with:
+          working-directory: cypress/TestMochaAccounts
+          build: npm run build
+          start: npm start
+          
+          config-file: cypress.config-alternate.js

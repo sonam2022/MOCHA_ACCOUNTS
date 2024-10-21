@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress open",
-    "file:json":"if exist mochawesome.json del mochawesome.json",
+    "file:json": "if exist mochawesome.json del mochawesome.json",
     "clean:reports": "if exist cypress\\results rmdir /S /Q cypress\\results && mkdir cypress\\results",
     "pretest": "npm run file:json && npm run clean:reports",
     "scripts": "cypress run --browser chrome",
@@ -25,7 +25,7 @@
     "@babel/preset-env": "^7.19.1",
     "@cypress/webpack-preprocessor": "^5.13.0",
     "babel-loader": "^8.2.5",
-    "cypress": "^10.11.0",
+    "cypress": "^13.15.0",
     "cypress-if": "^1.12.0",
     "cypress-iframe": "^1.0.1",
     "cypress-mailosaur": "^2.12.0",
