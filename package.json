@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress open",
-    "file:json": "if exist mochawesome.json del mochawesome.json",
+    "file:json": "del mochawesome.json",
     "clean:reports": "if exist cypress\\results rmdir /S /Q cypress\\results && mkdir cypress\\results",
     "pretest": "npm run file:json && npm run clean:reports",
     "scripts": "cypress run --browser chrome",
@@ -49,7 +49,6 @@
     "cypress-file-upload": "^5.0.8",
     "cypress-recurse": "^1.23.0",
     "date-and-time": "^2.4.1",
-    "dos2unix": "^1.1.2",
     "faker": "^5.5.3",
     "marge": "^1.0.1",
     "mocha-junit-reporter": "^2.0.2",
