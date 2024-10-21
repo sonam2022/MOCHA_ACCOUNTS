@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build": "echo building ... server ... done!",
     "test": "npx cypress open",
     "file:json": "if exist mochawesome.json rm mochawesome.json",
     "clean:reports": "if exist cypress\\results rmdir /S /Q cypress\\results && mkdir cypress\\results",

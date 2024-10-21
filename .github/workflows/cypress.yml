@@ -1,28 +1,26 @@
-name: example-custom-command
+name: main
 on:
   push:
     branches:
-      - 'main'
+      - 'master'
   pull_request:
-  workflow_dispatch:
-
 jobs:
-
-  start:
-    # example where instead of forming the default "cypress run ..."
-    # the user can specify their own command
+  build-and-test:
     runs-on: ubuntu-24.04
+    name: Build and test
     steps:
-      - name: Checkout 🛎
+      - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Custom tests 🧪
-        uses: ./
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          command:
-             npm run pretest
-             npm run mtest
-          working-directory: ./
-
-      - name: Show saved file
-        run: cat ./mochawesome-report/mochawesome.html
+          # Action runs: using: node20 as defined in
+          # https://github.com/cypress-io/github-action/blob/master/action.yml
+          # Node.js minor version is aligned to
+          # https://github.com/actions/runner/blob/main/src/Misc/externals.sh
+          node-version: 20.13.1
+          
+      - run: npm ci
+      - run: npm run format
+      - run: npm run pretest --chmod 777
+      - run: npm run mtest
