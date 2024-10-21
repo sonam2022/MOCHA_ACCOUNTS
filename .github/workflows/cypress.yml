@@ -23,5 +23,5 @@ jobs:
           
       - run: npm ci
       - run: npm run build
-      - run: npm run pretest --chmod 777
+      - run: npm run file:json
       - run: npm run mtest
