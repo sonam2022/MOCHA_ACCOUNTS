@@ -1,7 +1,20 @@
 name: Mocha Accounts CI
 
-on: [push]
+on:
+  push:
+    branches:
+      - 'master'
+  pull_request:
+  workflow_dispatch:
 
+env:
+  # Set up the Cypress Cloud project ID and record key as environment variables
+  # If the Actions secret EXAMPLE_PROJECT_ID is not defined then
+  # the projectId is taken from cypress.json (v9) or cypress.config.js (v10 and later).
+  # If the Actions secret EXAMPLE_RECORDING_KEY is not defined then recording jobs are skipped.
+  CYPRESS_PROJECT_ID: f2ocw4
+  CYPRESS_RECORD_KEY: f2oabab6f85-2f5f-4795-8d0b-c6d6cfa95bc7cw4
+ 
 jobs:
   build:
 
@@ -13,11 +26,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
+              
           
       - run: npm ci
      # - run: npm run build --if-present
       - run: npm run pretest
-      - run: npm run mtest
+      - run: npm run mtest --record --parallel
 
       - name: Show results file
         run: /home/runner/work/MOCHA_ACCOUNTS/MOCHA_ACCOUNTS/mochawesome-report/mochawesome.html
