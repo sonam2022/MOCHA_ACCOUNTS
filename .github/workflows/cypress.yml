@@ -5,7 +5,7 @@ on:
     branches:
       - 'master'
   pull_request:
-  workflow_dispatch:
+
 
 env:
   # Set up the Cypress Cloud project ID and record key as environment variables
@@ -14,6 +14,7 @@ env:
   # If the Actions secret EXAMPLE_RECORDING_KEY is not defined then recording jobs are skipped.
   CYPRESS_PROJECT_ID: f2ocw4
   CYPRESS_RECORD_KEY: f2oabab6f85-2f5f-4795-8d0b-c6d6cfa95bc7cw4
+  shell: cmd
  
 jobs:
   build:
