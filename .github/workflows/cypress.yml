@@ -24,10 +24,11 @@ jobs:
           # Node.js minor version is aligned to
           # https://github.com/actions/runner/blob/main/src/Misc/externals.sh
           node-version: 20.13.1
-          
-      - run: |  
-         npm install dos2unix
-         npm ci
-         npm run build
-         npm run pretest
-         npm run mtest
+      - name: Cypress test CI   
+        uses: cypress-io/github-action@v4
+        with:
+           browser: chrome
+
+       
+        
+       
