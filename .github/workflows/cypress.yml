@@ -2,10 +2,14 @@ name: Cypress Cloud Tests
 on: [push]
 
 jobs:
+    
   build:
-
+    
     runs-on: windows-latest
-
+    strategy:
+      fail-fast: false # https://github.com/cypress-io/github-action/issues/48
+      matrix:
+        containers: [1, 2] # Uses 2 parallel instances
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js
@@ -13,10 +17,14 @@ jobs:
         with:
           node-version: '20.x'
           cache: 'npm'
+           
+
       - run: npm ci
       - run: npm run build 
       - run: npm run pretest
-      - run: npm run mtest
-       
+      - run: npm run mtest --record --parallel
         
-       
+    env:
+            CYPRESS_RECORD_KEY: "abab6f85-2f5f-4795-8d0b-c6d6cfa95bc7"
+            record: true
+            parallel: true
