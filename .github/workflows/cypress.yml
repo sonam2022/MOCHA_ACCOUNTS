@@ -1,34 +1,19 @@
-name: main
-
-on:
-  push:
-    branches:
-      - 'main'
-  pull_request:
+name: Cypress Cloud Tests
+on: [push]
 jobs:
-    
-
-  build-and-test:
-    runs-on: ubuntu-24.04
-    name: Build and test
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          # Action runs: using: node20 as defined in
-          # https://github.com/cypress-io/github-action/blob/master/action.yml
-          # Node.js minor version is aligned to
-          # https://github.com/actions/runner/blob/main/src/Misc/externals.sh
-          node-version: 20.13.1
-      - name: Cypress test CI   
-        uses: cypress-io/github-action@v4
-        with:
-           browser: chrome
-
+ Cypress-Test:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Checkout GitCode
+       uses: actions/checkout@v2
+ 
+     - name: Run Cypress Test
+       uses: cypress-io/github-action@v4
+       with:
+         command: |
+          npm run pretest
+          npm run mtest
+ 
        
         
        
