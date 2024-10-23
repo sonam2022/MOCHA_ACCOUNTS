@@ -18,13 +18,24 @@ jobs:
           node-version: '20.x'
           cache: 'npm'
            
-
       - run: npm ci
       - run: npm run build 
       - run: npm run pretest
-      - run: npm run mtest --record --parallel
-        
-    env:
+      - run: npm run mtest   
+ 
+      - uses: cypress-io/github-action@v4
+      - uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+            name: cypress-screenshots
+            path: ./cypress/screenshots
+      - uses: actions/upload-artifact@v2
+        if: always()
+        with:
+            name: cypress-videos
+            path: ./cypress/videos
+env:
             CYPRESS_RECORD_KEY: "abab6f85-2f5f-4795-8d0b-c6d6cfa95bc7"
             record: true
             parallel: true
+
